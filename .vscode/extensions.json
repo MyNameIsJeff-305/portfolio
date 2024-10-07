@@ -1,4 +1,5 @@
 {
   "recommendations": ["astro-build.astro-vscode"],
+  "typescript.inlayHints.parameterNames.enabled": "all",
   "unwantedRecommendations": []
 }
