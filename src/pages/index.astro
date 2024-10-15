@@ -1,9 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Email from "../icons/Email.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Badge from "../components/Badge.astro";
 import Social from "../components/Social.astro";
+import Github from "../icons/Github.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -30,10 +31,18 @@ import Social from "../components/Social.astro";
         functionality across the entire stack. From Miami, FL 🇺🇸
       </h2>
 
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-x-4 mt-8">
         <Social href="https://linkedin.com/in/mm4ever">
           <LinkedIn class="w-6 h-6" />
           Linkedin
+        </Social>
+        <Social href="https://github.com/MyNameIsJeff-305">
+          <Github class="w-6 h-6" />
+          Github
+        </Social>
+        <Social href="mailto:michelgarcia950528@icloud.com">
+          <Email class="w-6 h-6" />
+          michelgarcia950528@icloud.com
         </Social>
       </nav>
     </section>
