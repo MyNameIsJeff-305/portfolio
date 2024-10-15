@@ -1,19 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Badge from "../components/Badge.astro";
+import Social from "../components/Social.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44"></section>
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
-			Hey, I am Michel <div class="flex justify-center items-center"><Badge>Available for hire</Badge></div>
-		</h1>
-		<h2 class="text-xl">I am a dedicated Full Stack Software Engineer with hands-on experience in developing web
-			applications using modern technologies such as React, Redux, Express, and Sequelize. 
-			I am proficient in creating dynamic, user-friendly interfaces and ensuring seamless 
-			functionality across the entire stack. From Miami, FL
-		</h2>
-	</main>
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, I am Michel <a
+          href="https://linkedin.com/in/mm4ever"
+          target="_blank"
+          class="flex justify-center items-center"
+        >
+          <Badge>Available for hire</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl text-wrap">
+        I am a dedicated <span class="text-orange-300"
+          >Full Stack Software Engineer</span
+        > with hands-on experience in developing web applications using modern technologies
+        such as <span class="text-cyan-300">React</span>,
+        <span class="text-purple-600">Redux</span>, <span class="text-blue-500"
+          >Express</span
+        >, and <span class="text-blue-800">Sequelize</span>. I am proficient in
+        creating dynamic, user-friendly interfaces and ensuring seamless
+        functionality across the entire stack. From Miami, FL 🇺🇸
+      </h2>
+
+      <nav class="flex gap-x-2">
+        <Social href="https://linkedin.com/in/mm4ever">
+          <LinkedIn class="w-6 h-6" />
+          Linkedin
+        </Social>
+      </nav>
+    </section>
+  </main>
 </Layout>
