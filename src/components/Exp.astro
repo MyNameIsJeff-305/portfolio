@@ -1,0 +1,34 @@
+---
+import ExpItem from "./ExpItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "June 2023 - Today",
+    title: "Full Stack Web Developer @ SMART Solutions",
+    description:
+      "Managed development projects such as custom CRM for small companies. Led development teams in the software production process, including deployment of web applications built on Django/Python and Express/Sequelize Environments. Perform Unit Testing on new Features using Mocha, and Playwright, ensuring the quality of the codebase.",
+  },
+  {
+    date: "January 2020 - June 2023",
+    title: "Freelance Graphic Designer",
+    description:
+    "Branding and rebranding on major companies across Cuba and Miami, FL. Social media management and community for travel agencies and phone topup companies. Development of Content strategies for companies. Design of promotional pieces and signs."
+  },
+  {
+    date: "January 2020 - June 2023",
+    title: "Freelance Web Developer",
+    description:
+      "Development of custom web solutions for small businesses in Cuba and the United States. I have worked on projects ranging from static websites to full-stack web applications, including e-commerce platforms and content management systems.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li>
+        <ExpItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

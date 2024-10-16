@@ -1,0 +1,124 @@
+---
+import Express from "../icons/Express.astro";
+import Flask from "../icons/Flask.astro";
+import JS from "../icons/JS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import Postgre from "../icons/Postgre.astro";
+import Python from "../icons/Python.astro";
+import React from "../icons/React.astro";
+import Redux from "../icons/Redux.astro";
+import Sequelize from "../icons/Sequelize.astro";
+import SQL from "../icons/SQL.astro";
+import Svelte from "../icons/Svelte.astro";
+import ProjectItem from "./ProjectItem.astro";
+
+const TAGS = {
+    REACT: {
+        name: "React",
+        // className: "bg-[#58C4DC] text-white",
+        color: "bg-blue-500",
+        icon: React
+    },
+    REDUX: {
+        name: "Redux",
+        // className: "bg-[#764abc] text-white",
+        color: "bg-purple-600",
+        icon: Redux
+    },
+    EXPRESS: {
+        name: "Express",
+        // className: "bg-[#259dff] text-white",
+        color: "bg-blue-500",
+        icon: Express
+    },
+    SEQUELIZE: {
+        name: "Sequelize",
+        // className: "bg-[#02afef] text-white",
+        color: "bg-blue-800",
+        icon: Sequelize
+    },
+    POSTGRE: {
+        name: "PostgreSQL",
+        // className: "bg-[#699eca] text-white",
+        color: "bg-blue-900",
+        icon: Postgre
+    },
+    PYTHON: {
+        name: "Python",
+        // className: "bg-[#ffdf76] text-gray-500",
+        color: "bg-yellow-400",
+        icon: Python
+    },
+    FLASK: {
+        name: "Flask",
+        // className: "bg-[#004b6b] text-white",
+        color: "bg-green-500",
+        icon: Flask
+    },
+    SQLALCHEMY: {
+        name: "SQLAlchemy",
+        // className: "bg-[#B00] text-white",
+        color: "bg-blue-500",
+        icon: SQL
+    },
+    SVELTE: {
+        name: "SvelteKit",
+        // className: "bg-[#F96743] text-white",
+        color: "bg-blue-500",
+        icon: Svelte
+    },
+    JAVASCRIPT: {
+        name: "Javascript",
+        // className: "bg-[#f7df38] text-white",
+        color: "bg-yellow-400",
+        icon: JS
+    },
+    NODEJS: {
+        name: "NodeJS",
+        // className: "bg-[#84BA64] text-white",
+        color: "bg-green-500",
+        icon: NodeJS
+    }
+}
+
+const PROJECTS = [
+  {
+    title: "ticketFlow",
+    description:
+      "TicketFlow is a streamlined ticket management app built for IT businesses. It simplifies the handling of support requests with real-time tracking, easy-to-use workflows, and detailed reporting.",
+    livelink: "https://ticket-flow-rrfx.onrender.com/",
+    github: "https://github.com/MyNameIsJeff-305/ticket-flow",
+    image:
+      "https://github.com/MyNameIsJeff-305/ticket-flow/blob/main/images/splash-1.png?raw=true",
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.SEQUELIZE, TAGS.POSTGRE],
+  },
+  {
+    title: "Etsify",
+    description:
+      "Etsify (Etsy Clone) is a full-stack e-commerce platform that allows users to buy and sell handmade or vintage items, art, and supplies. It is a clone of the popular e-commerce website Etsy.",
+    livelink: "https://etsy-group-project-vlatest-1.onrender.com/",
+    github: "https://github.com/surnan/Etsify",
+    image:
+      "https://media.discordapp.net/attachments/1276697235408683154/1284693154720776222/image.png?ex=670fc4fc&is=670e737c&hm=0d12d769ece31e41f60fdad24f404298cd83b7e793406fef6b4261d86b6c1d83&=&format=webp&quality=lossless&width=979&height=527",
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.PYTHON, TAGS.FLASK, TAGS.SQLALCHEMY, TAGS.POSTGRE],
+  },
+  {
+    title: "myWeatherApp",
+    description:
+      "myWeatherApp is a simple weather application that allows users to search for a city and get the current weather and a 3-day forecast. Built from scratch using SvelteKit and WeatherAPI.com",
+    livelink: "https://myweatherapp-305.netlify.app",
+    github: "https://github.com/MyNameIsJeff-305/myWeatherApp",
+    image:
+      "https://github.com/MyNameIsJeff-305/myWeatherApp/blob/main/static/myWeather.png?raw=true",
+    tags: [TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.NODEJS],
+  },
+];
+---
+
+<div class="flex flex-col gap-x-4 gap-y-6 px-3 w-full">
+  {
+    PROJECTS.map((project) => (
+        <ProjectItem {...project} />
+    ))
+  }
+</div>

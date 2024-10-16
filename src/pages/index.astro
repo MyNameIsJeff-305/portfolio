@@ -1,24 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Badge from "../components/Badge.astro";
 import Social from "../components/Social.astro";
+import Github from "../icons/Github.astro";
+import Email from "../icons/Email.astro";
+import Exp from "../components/Exp.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Code from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hey, I am Michel <a
+<Layout
+  title="Michel's Portfolio - Web Developer and Programmer with 5 years of ecperience/"
+  description="Michel Garcia is a Full Stack Software Engineer with hands-on experience in developing web applications using modern technologies such as React, Redux, Express, and Sequelize. He is proficient in creating dynamic, user-friendly interfaces and ensuring seamless functionality across the entire stack."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <div class="flex gap-4 mb-4">
+        <img
+          class="rounded-full shadow-lg size-24"
+          src="https://avatars.githubusercontent.com/u/149029907?v=4"
+          alt="Michel Garcia"
+        />
+        <a
           href="https://linkedin.com/in/mm4ever"
           target="_blank"
-          class="flex justify-center items-center"
+          class="flex items-center transition md:justify-center md:hover:scale-105"
         >
           <Badge>Available for hire</Badge>
         </a>
+      </div>
+      <h1
+        class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+      >
+        Hey, I am Michel
       </h1>
-      <h2 class="text-2xl text-wrap">
+      <h2 class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
         I am a dedicated <span class="text-orange-300"
           >Full Stack Software Engineer</span
         > with hands-on experience in developing web applications using modern technologies
@@ -30,12 +51,42 @@ import Social from "../components/Social.astro";
         functionality across the entire stack. From Miami, FL 🇺🇸
       </h2>
 
-      <nav class="flex gap-x-2">
+      <nav class="flex flex-wrap gap-4 mt-8">
         <Social href="https://linkedin.com/in/mm4ever">
-          <LinkedIn class="w-6 h-6" />
+          <LinkedIn class="size-4 md:size-6" />
           Linkedin
         </Social>
+        <Social href="https://github.com/MyNameIsJeff-305">
+          <Github class="size-4 md:size-6" />
+          Github
+        </Social>
+        <Social href="mailto:michelgarcia950528@icloud.com">
+          <Email class="size-4 md:size-6" />
+          michelgarcia950528@icloud.com
+        </Social>
       </nav>
-    </section>
+    </SectionContainer>
+    <div class="space-y-24"></div>
+    <SectionContainer id="experience">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <Briefcase class="size-8" />
+        Experience
+      </h2>
+      <Exp />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-2xl font-semibold mb-6 mt-10 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="about">
+      <h2 class="text-2xl font-semibold mb-6 mt-10 flex gap-x-3 items-center">
+        <ProfileCheck class="size-8"/>
+        About Me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
   </main>
 </Layout>
