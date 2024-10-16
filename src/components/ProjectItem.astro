@@ -3,7 +3,19 @@ import Browser from "../icons/Browser.astro";
 import Github from "../icons/Github.astro";
 import Social from "./Social.astro";
 
-const { title, description, livelink, github, image, tags } = Astro.props;
+interface Tag {
+  icon: any; // Replace 'any' with the actual type if known
+  name: string;
+}
+
+const { title, description, livelink, github, image, tags } = Astro.props as {
+  title: string;
+  description: string;
+  livelink: string;
+  github: string;
+  image: string;
+  tags: Tag[];
+};
 ---
 
 <div
