@@ -8,6 +8,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 
 ## Table of Contents
 
+- [Live Link] (https://mynameisjeffportfolio.netlify.app/)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Getting Started](#getting-started)
