@@ -29,7 +29,9 @@ const { title, description, livelink, github, image, tags } = Astro.props as {
   <div
     class="flex flex-col justify-between p-4 leading-normal w-full md:w-auto"
   >
-    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-orange-300">
+    <h5
+      class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-orange-300"
+    >
       {title}
       {
         tags && (
@@ -37,7 +39,7 @@ const { title, description, livelink, github, image, tags } = Astro.props as {
             {tags.map((tag) => (
               <li class="list-none mb-5">
                 <span class="flex gap-x-2 rounded-full text-xs font-normal text-gray-700 dark:text-white/80 bg-gray-200 dark:bg-white/5 py-2 px-3 items-center">
-                  <tag.icon class="size-4 md:size-4" />
+                  {tag.icon && <tag.icon class="size-4 md:size-4" />}
                   {tag.name}
                 </span>
               </li>
@@ -46,16 +48,26 @@ const { title, description, livelink, github, image, tags } = Astro.props as {
         )
       }
     </h5>
-    <p class="text-sm font-normal text-gray-600 dark:text-gray-100 text-pretty">{description}</p>
+    <p class="text-sm font-normal text-gray-600 dark:text-gray-100 text-pretty">
+      {description}
+    </p>
     <div class="flex gap-4 mt-3 flex-wrap">
-      <Social href={livelink}>
-        <Browser class="size-4 md:size-4"/>
-        <span class="text-sm">Live Demo</span>
-      </Social>
-      <Social href={github}>
-        <Github class="size-4 md:size-4" />
-        <span class="text-sm">Github Repo</span>
-      </Social>
+      {
+        livelink && (
+          <Social href={livelink}>
+            <Browser class="size-4 md:size-4" />
+            <span class="text-sm">Live Demo</span>
+          </Social>
+        )
+      }
+      {
+        github && (
+          <Social href={github}>
+            <Github class="size-4 md:size-4" />
+            <span class="text-sm">Github Repo</span>
+          </Social>
+        )
+      }
     </div>
   </div>
 </div>
