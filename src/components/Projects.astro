@@ -12,121 +12,135 @@ import SQL from "../icons/SQL.astro";
 import Svelte from "../icons/Svelte.astro";
 import Bootstrap from "../icons/Bootstrap.astro";
 import Firebase from "../icons/Firebase.astro";
+import Angular from "../icons/Angular.astro";
+import Material from "../icons/Material.astro";
 import ProjectItem from "./ProjectItem.astro";
 
 const TAGS = {
-    REACT: {
-        name: "React",
-        // className: "bg-[#58C4DC] text-white",
-        color: "bg-blue-500",
-        icon: React
-    },
-    REDUX: {
-        name: "Redux",
-        // className: "bg-[#764abc] text-white",
-        color: "bg-purple-600",
-        icon: Redux
-    },
-    EXPRESS: {
-        name: "Express",
-        // className: "bg-[#259dff] text-white",
-        color: "bg-blue-500",
-        icon: Express
-    },
-    SEQUELIZE: {
-        name: "Sequelize",
-        // className: "bg-[#02afef] text-white",
-        color: "bg-blue-800",
-        icon: Sequelize
-    },
-    POSTGRE: {
-        name: "PostgreSQL",
-        // className: "bg-[#699eca] text-white",
-        color: "bg-blue-900",
-        icon: Postgre
-    },
-    PYTHON: {
-        name: "Python",
-        // className: "bg-[#ffdf76] text-gray-500",
-        color: "bg-yellow-400",
-        icon: Python
-    },
-    FLASK: {
-        name: "Flask",
-        // className: "bg-[#004b6b] text-white",
-        color: "bg-green-500",
-        icon: Flask
-    },
-    SQLALCHEMY: {
-        name: "SQLAlchemy",
-        // className: "bg-[#B00] text-white",
-        color: "bg-blue-500",
-        icon: SQL
-    },
-    SVELTE: {
-        name: "SvelteKit",
-        // className: "bg-[#F96743] text-white",
-        color: "bg-blue-500",
-        icon: Svelte
-    },
-    JAVASCRIPT: {
-        name: "Javascript",
-        // className: "bg-[#f7df38] text-white",
-        color: "bg-yellow-400",
-        icon: JS
-    },
-    NODEJS: {
-        name: "NodeJS",
-        // className: "bg-[#84BA64] text-white",
-        color: "bg-green-500",
-        icon: NodeJS
-    },
-    PHP: {
-        name: "PHP",
-        // className: "bg-[#8892be] text-white",
-        color: "bg-blue-500",
-        // icon: PHP
-    },
-    SYMPHONY: {
-        name: "Symfony",
-        // className: "bg-[#000] text-white",
-        color: "bg-blue-500",
-        // icon: Symfony
-    },
-    SQLITE: {
-        name: "SQLite",
-        // className: "bg-[#003B57] text-white",
-        color: "bg-blue-500",
-        // icon: SQLite
-    },
-    ANDROID: {
-        name: "Android",
-        // className: "bg-[#3DDC84] text-white",
-        color: "bg-green-500",
-        // icon: Android
-    },
-    BOOTSTRAP: {
-        name: "Bootstrap",
-        // className: "bg-[#563d7c] text-white",
-        color: "bg-purple-800",
-        icon: Bootstrap
-    },
-    FIREBASE: {
-        name: "Firebase",
-        // className: "bg-[#FFA611] text-white",
-        color: "bg-yellow-500",
-        icon: Firebase
-    }
-}
+  REACT: {
+    name: "React",
+    // className: "bg-[#58C4DC] text-white",
+    color: "bg-blue-500",
+    icon: React,
+  },
+  REDUX: {
+    name: "Redux",
+    // className: "bg-[#764abc] text-white",
+    color: "bg-purple-600",
+    icon: Redux,
+  },
+  EXPRESS: {
+    name: "Express",
+    // className: "bg-[#259dff] text-white",
+    color: "bg-blue-500",
+    icon: Express,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    // className: "bg-[#02afef] text-white",
+    color: "bg-blue-800",
+    icon: Sequelize,
+  },
+  POSTGRE: {
+    name: "PostgreSQL",
+    // className: "bg-[#699eca] text-white",
+    color: "bg-blue-900",
+    icon: Postgre,
+  },
+  PYTHON: {
+    name: "Python",
+    // className: "bg-[#ffdf76] text-gray-500",
+    color: "bg-yellow-400",
+    icon: Python,
+  },
+  FLASK: {
+    name: "Flask",
+    // className: "bg-[#004b6b] text-white",
+    color: "bg-green-500",
+    icon: Flask,
+  },
+  SQLALCHEMY: {
+    name: "SQLAlchemy",
+    // className: "bg-[#B00] text-white",
+    color: "bg-blue-500",
+    icon: SQL,
+  },
+  SVELTE: {
+    name: "SvelteKit",
+    // className: "bg-[#F96743] text-white",
+    color: "bg-blue-500",
+    icon: Svelte,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    // className: "bg-[#f7df38] text-white",
+    color: "bg-yellow-400",
+    icon: JS,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    // className: "bg-[#84BA64] text-white",
+    color: "bg-green-500",
+    icon: NodeJS,
+  },
+  PHP: {
+    name: "PHP",
+    // className: "bg-[#8892be] text-white",
+    color: "bg-blue-500",
+    // icon: PHP
+  },
+  SYMPHONY: {
+    name: "Symfony",
+    // className: "bg-[#000] text-white",
+    color: "bg-blue-500",
+    // icon: Symfony
+  },
+  SQLITE: {
+    name: "SQLite",
+    // className: "bg-[#003B57] text-white",
+    color: "bg-blue-500",
+    // icon: SQLite
+  },
+  ANDROID: {
+    name: "Android",
+    // className: "bg-[#3DDC84] text-white",
+    color: "bg-green-500",
+    // icon: Android
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    // className: "bg-[#563d7c] text-white",
+    color: "bg-purple-800",
+    icon: Bootstrap,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    // className: "bg-[#FFA611] text-white",
+    color: "bg-yellow-500",
+    icon: Firebase,
+  },
+  ANGULAR: {
+    name: "Angular",
+    // className: "bg-[#D6002F] text-white",
+    color: "bg-red-500",
+    icon: Angular,
+  },
+  MATERIAL: {
+    name: "Material UI",
+    // className: "bg-[#00A98F] text-white",
+    color: "bg-green-500",
+    icon: Material,
+  },
+};
 
 const PROJECTS = [
-{
+  {
     title: "Inscripta",
     description:
       "Inscripta is a full-stack application for managing events, conferences, workshops, and any other type of gathering that requires check-in and registration. It is built with PHP and Symphony. Also integrates an Android app for the check-in process and QR Scanning of Badges generated by the app.",
     livelink: "https://legacy.inscripta.sv-vgbtwabxsp.cloud.elastika.pe/",
     image: "./inscripta.jpg",
-    tags: [TAGS.PHP, TAGS.SYMPHONY, TAGS.SQLITE, TAGS.ANDROID]
+    tags: [TAGS.PHP, TAGS.SYMPHONY, TAGS.SQLITE, TAGS.ANDROID],
   },
   {
     title: "ticketFlow",
@@ -134,8 +148,7 @@ const PROJECTS = [
       "TicketFlow is a streamlined ticket management app built for IT businesses. It simplifies the handling of support requests with real-time tracking, easy-to-use workflows, and detailed reporting.",
     livelink: "https://ticket-flow-rrfx.onrender.com/",
     github: "https://github.com/MyNameIsJeff-305/ticket-flow",
-    image:
-      "./ticketFlow.jpg",
+    image: "./ticketFlow.jpg",
     tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.SEQUELIZE, TAGS.POSTGRE],
   },
   {
@@ -144,25 +157,28 @@ const PROJECTS = [
       "myWeatherApp is a simple weather application that allows users to search for a city and get the current weather and a 3-day forecast. Built from scratch using SvelteKit and WeatherAPI.com",
     livelink: "https://myweatherapp-305.netlify.app",
     github: "https://github.com/MyNameIsJeff-305/myWeatherApp",
-    image:
-      "./myWeatherApp.jpg",
+    image: "./myWeatherApp.jpg",
     tags: [TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.NODEJS],
   },
   {
     title: "la Nave App",
     description:
-    "la Nave App is the main ride app in Havana, Cuba. It allows users to book a ride, track the driver, and pay for the service. It is built with React, React Native and Firebase. The Splash Page is built with HTML, CSS, and Bootstrap. This is the most accurate Uber clone that actually works in real-life, with more than 2000 active drivers and clients.",
+      "la Nave App is the main ride app in Havana, Cuba. It allows users to book a ride, track the driver, and pay for the service. It is built with React, React Native and Firebase. The Splash Page is built with HTML, CSS, and Bootstrap. This is the most accurate Uber clone that actually works in real-life, with more than 2000 active drivers and clients.",
     livelink: "https://lanave.app",
     image: "./laNave.jpg",
-    tags: [TAGS.REACT, TAGS.FIREBASE, TAGS.BOOTSTRAP]
-  }
+    tags: [TAGS.REACT, TAGS.FIREBASE, TAGS.BOOTSTRAP],
+  },
+  {
+    title: "Mi Numero Local",
+    description:
+      "Mi numero Local is the most successful company that offer mobile top-ups in Cuba. I worked on renew the website's design and adding integration to Airplane Tickets Reservations API. The website is built with Angular, NodeJS, and Firebase.",
+    livelink: "https://minumerolocal.com",
+    image: "./mnl.jpg",
+    tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.FIREBASE, TAGS.MATERIAL],
+  },
 ];
 ---
 
 <div class="flex flex-col gap-x-4 gap-y-6 px-3 w-full">
-  {
-    PROJECTS.map((project) => (
-        <ProjectItem {...project} />
-    ))
-  }
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
 </div>
