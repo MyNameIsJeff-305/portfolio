@@ -18,6 +18,7 @@ import Angular from "../icons/Angular.astro";
 import Material from "../icons/Material.astro";
 import PHP from "../icons/PHP.astro";
 import Android from "../icons/Android.astro";
+import Ollama from "../icons/Ollama.astro";
 
 import ProjectItem from "./ProjectItem.astro";
 
@@ -27,6 +28,12 @@ const TAGS = {
     // className: "bg-[#58C4DC] text-white",
     color: "bg-blue-500",
     icon: React,
+  },
+  SQL: {
+    name: "SQL",
+    // className: "bg-[#f29111] text-white",
+    color: "bg-orange-400",
+    icon: SQL,
   },
   REDUX: {
     name: "Redux",
@@ -142,9 +149,23 @@ const TAGS = {
     color: "bg-green-500",
     icon: Material,
   },
+  OLLAMA: {
+    name: "Ollama",
+    // className: "bg-[#00A98F] text-white",
+    color: "bg-green-500",
+    icon: Ollama,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "ticketFlow",
+    description:
+      "TicketFlow is a streamlined ticket management app built for IT businesses. It simplifies the handling of support requests with real-time tracking, easy-to-use workflows, and detailed reporting. Includes new AI features for automatic ticket categorization and response suggestions, enhancing efficiency and customer satisfaction.",
+    github: "https://github.com/MyNameIsJeff-305/ticket-flow",
+    image: "./ticketflow.jpg",
+    tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.SEQUELIZE, TAGS.POSTGRE, TAGS.OLLAMA],
+  },
   {
     title: "Windows 11 Compatibility Tool",
     description: "win11-comp-tool is a user-oriented application that allows individuals or system administrators to evaluate and record whether a workstation meets the system requirements for upgrading to Windows 11. This process is a 2-part workflow when Users Download and run a .exe file, and the Web Application generates a PDF Report with all the info gathered by the .exe script.",
@@ -171,7 +192,7 @@ const PROJECTS = [
       TAGS.REDUX,
       TAGS.EXPRESS,
       TAGS.SEQUELIZE,
-      TAGS.POSTGRE
+      TAGS.SQL
     ],
   },
   {
@@ -183,27 +204,9 @@ const PROJECTS = [
     tags: [TAGS.PHP, TAGS.SYMPHONY, TAGS.SQLITE, TAGS.ANDROID],
   },
   {
-    title: "ticketFlow",
-    description:
-      "TicketFlow is a streamlined ticket management app built for IT businesses. It simplifies the handling of support requests with real-time tracking, easy-to-use workflows, and detailed reporting.",
-    livelink: "https://ticket-flow-rrfx.onrender.com/",
-    github: "https://github.com/MyNameIsJeff-305/ticket-flow",
-    image: "./ticketFlow.jpg",
-    tags: [TAGS.REACT, TAGS.REDUX, TAGS.EXPRESS, TAGS.SEQUELIZE, TAGS.POSTGRE],
-  },
-  {
-    title: "myWeatherApp",
-    description:
-      "myWeatherApp is a simple weather application that allows users to search for a city and get the current weather and a 3-day forecast. Built from scratch using SvelteKit and WeatherAPI.com",
-    livelink: "https://myweatherapp-305.netlify.app",
-    github: "https://github.com/MyNameIsJeff-305/myWeatherApp",
-    image: "./myWeatherApp.jpg",
-    tags: [TAGS.SVELTE, TAGS.JAVASCRIPT, TAGS.NODEJS],
-  },
-  {
     title: "la Nave App",
     description:
-      "la Nave App is the main ride app in Havana, Cuba. It allows users to book a ride, track the driver, and pay for the service. It is built with React, React Native and Firebase. The Splash Page is built with HTML, CSS, and Bootstrap. This is the most accurate Uber clone that actually works in real-life, with more than 2000 active drivers and clients.",
+    "la Nave App is the main ride app in Havana, Cuba. It allows users to book a ride, track the driver, and pay for the service. It is built with React, React Native and Firebase. The Splash Page is built with HTML, CSS, and Bootstrap. This is the most accurate Uber clone that actually works in real-life, with more than 2000 active drivers and clients.",
     livelink: "https://lanave.app",
     image: "./laNave.jpg",
     tags: [TAGS.REACT, TAGS.FIREBASE, TAGS.BOOTSTRAP],
@@ -211,7 +214,7 @@ const PROJECTS = [
   {
     title: "Mi Numero Local",
     description:
-      "Mi numero Local is the most successful company that offer mobile top-ups in Cuba. I worked on renew the website's design and adding integration to Airplane Tickets Reservations API. The website is built with Angular, NodeJS, and Firebase.",
+    "Mi numero Local is the most successful company that offer mobile top-ups in Cuba. I worked on renew the website's design and adding integration to Airplane Tickets Reservations API. The website is built with Angular, NodeJS, and Firebase.",
     livelink: "https://minumerolocal.com",
     image: "./mnl.jpg",
     tags: [TAGS.ANGULAR, TAGS.NODEJS, TAGS.FIREBASE, TAGS.MATERIAL],
