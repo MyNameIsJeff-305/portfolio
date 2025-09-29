@@ -8,11 +8,10 @@ interface Props {
   title: string;
   description: string;
   date: string;
-  link?: string;
   tags: Tag[];
 }
 
-const { title, description, date, link, tags } = Astro.props;
+const { title, description, date, tags } = Astro.props;
 ---
 
 <div
